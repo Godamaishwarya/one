@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: crimson;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            max-width: 400px;
+            width: 100%;
+           
+        }
+        .box .search_box{
+            position: relative;
+            height: 50px;
+            max-width: 50px;
+            margin: auto;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        #check:checked ~ .search_box{
+            max-width: 380px;
+        }
+        .search_box input{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            border: none;
+            padding-left: 20px;
+            font-size: 18px;
+            background: #fff;
+        }
+        .search_box .icon{
+            position: absolute;
+            top: 0;
+            right: -2px;
+            background-color: crimson;
+            height: 100%;
+            width: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: crimson;
+            font-size: 20px;
+            border-radius:25px;
+            background-color: #fff;
+
+        }
+        #check:checked ~ .search_box .icon{
+            background-color: #fff;
+            color: crimson;
+            width: 60px;
+            border-radius: 0 25px 25px 0;
+        }
+        #check{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <input type="checkbox" name="" id="check">
+        <div class="search_box">
+            <input type="text" placeholder="Type here..." name="" id="">
+            <label for="check" class="icon">
+                <i class="fa fa-search"></i>
+            </label>
+        </div>
+    </div>
+
+</body>
+</html>
